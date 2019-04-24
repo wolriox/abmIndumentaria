@@ -26,14 +26,14 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - Instalar vue (npm install -g vue-cli)
 
 - En la carpeta de proyectos crear la app (vue init webpack abm-stock)
-
+``` bash
 >Runtime + compiler
 >Install vue-router? Y
 >Use ESLint? N
 >Set up unit tests? N
 >Setup e2e tests w? N
 >Yes use NPM.
-
+```
 - Entrar a la carpeta e intalar npm (cd abm-stock) (npm install)
 - Instalar firebase (npm install firebase --save)
 
