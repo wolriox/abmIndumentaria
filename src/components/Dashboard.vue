@@ -5,7 +5,11 @@
                 <h4>Artículos</h4>
             </li>
             <li v-for="item in items" v-bind:key="item.id" class="collection-item">
+                <div class="chip">{{item.item_id}}</div>
                 {{item.name}}
+                <router-link class="secondary-content" v-bind:to="{name: 'view-item', params: {item_id: item.item_id}}">
+                    <i class="fa fa-eye"></i>
+                </router-link>
             </li>
         </ul>
         
@@ -28,7 +32,7 @@ export default {
         }
     },
     created () {
-        db.collection('items').get().then(querySnapshot => {
+        db.collection('items').orderBy('item_id').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {                
                 const data = {
                     'id': doc.id,

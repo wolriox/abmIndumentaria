@@ -20,12 +20,12 @@ export default new Router({
       component: NewItem
     },
     {
-      path: '/edit/:articulo_id',
+      path: '/edit/:item_id',
       name: 'edit-item',
       component: EditItem
     },
     {
-      path: '/:articulo_id',
+      path: '/:item_id',
       name: 'view-item',
       component: ViewItem
     },
