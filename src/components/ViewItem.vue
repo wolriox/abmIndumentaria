@@ -8,6 +8,12 @@
         </ul>
         <router-link to="/" class="btn grey">Volver</router-link>
         <button @click="deleteItem" class="btn red">Borrar</button>
+
+        <div class="fixed-action-btn">
+            <router-link v-bind:to="{name: 'edit-item', params:{item_id: item_id}}" class="btn-floating btn-large red">
+                <i class="fa fa-pencil"></i>
+            </router-link>
+        </div>
     </div>
 </template>
 
